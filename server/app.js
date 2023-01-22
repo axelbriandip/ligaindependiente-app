@@ -1,6 +1,7 @@
 const express = require('express');
 
 // routers
+const { playersRouter } = require('./routes/players.routes');
 
 // controllers
 
@@ -15,6 +16,7 @@ app.use(express.json())
 // enable cors
 
 // define endpoints
+app.use('api/v1/players', playersRouter);
 
 // global error handler
 
